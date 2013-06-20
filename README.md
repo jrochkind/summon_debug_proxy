@@ -19,12 +19,12 @@ git clone then...
 
 ~~~bash
 # Need your Summon api keys in environment variables
-export SUMMON_ACCESS_ID=your_access_id
-export SUMMON_SECRET_KEY=your_secret_key
+$ export SUMMON_ACCESS_ID=your_access_id
+$ export SUMMON_SECRET_KEY=your_secret_key
 
-cd summon_demo_proxy
-bundle install
-rackup -p 3000 # port starts on port 3000
+$ cd summon_demo_proxy
+$ bundle install
+$ rackup -p 3000 # port starts on port 3000
 ~~~
 
 Now visit `http://your.server.tld:3000/search?s.q=foo`. Add whatever Summon API strings you want
