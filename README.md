@@ -37,4 +37,5 @@ a firewall and/or password protection, or you've exposed a backdoor into your
 Summon API access to anyone on the internet, skipping auth! 
 
 **Note also** You can also easily deploy this app in a more permanent way
-using Phusion Passneger, same as any rack app. 
+using Phusion Passneger, same as any rack app.  Don't forget to set the Summon api
+key env variables so Passenger picks up em, google the passenger docs. 
