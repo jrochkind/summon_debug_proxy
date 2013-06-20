@@ -34,7 +34,24 @@ get "/search.?:format?" do
   end
 
   if params["format"] == "html"
-    return "<pre>" + JSON.pretty_generate(  JSON.parse(response.body)  ) + "</pre>"
+   return <<-EOS
+    <html>
+      <head>
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/idea.min.css">
+        <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+      </head>
+      <body>
+        <pre><code class="JSON">
+#{JSON.pretty_generate( JSON.parse response.body ) }
+        </pre></code>
+      </body>
+
+    </html>
+
+   EOS
+
+    #return "<pre>" + JSON.pretty_generate(  JSON.parse(response.body)  ) + "</pre>"
   else
     content_type( response.headers["Content-Type"])
     return response.body
