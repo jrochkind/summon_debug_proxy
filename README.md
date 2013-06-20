@@ -30,7 +30,7 @@ $ rackup -p 3000 # port starts on port 3000
 Now visit `http://your.server.tld:3000/search?s.q=foo`. Add whatever Summon API strings you want
 after the ? mark.  You'll get back raw JSON. 
 
-Or change to `/search.html?` to get pretty-printed JSON embedded in an HTML <pre>
+Or change to `/search.html?` to get pretty-printed JSON embedded in an HTML pre tag. 
 
 **NOTE WELL** Do not put this on the public web unless you've protected it behind
 a firewall and/or password protection, or you've exposed a backdoor into your
