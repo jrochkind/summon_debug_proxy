@@ -37,7 +37,7 @@ get "/search.?:format?" do
    return <<-EOS
     <html>
       <head>
-        <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/idea.min.css">
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/github.min.css">
         <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
       </head>
